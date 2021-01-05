@@ -1,4 +1,4 @@
-#waifu-toggle {
+/* #waifu-toggle {
 	background-color: #49b1f5;
 	border-radius: 5px;
 	bottom: 80px;
@@ -20,7 +20,7 @@
 
 #waifu-toggle.waifu-toggle-active:hover {
 	margin-left: -30px;
-}
+} */
 
 #waifu {
 	bottom: -1000px;

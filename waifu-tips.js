@@ -21,13 +21,13 @@ function loadWidget(config) {
 			<div id="waifu-tips"></div>
 			<canvas id="live2d" width="800" height="800"></canvas>
 			<div id="waifu-tool">
-				<span class="fa fa-lg fa-comment"></span>
-				<span class="fa fa-lg fa-paper-plane"></span>
-				<span class="fa fa-lg fa-user-circle"></span>
-				<span class="fa fa-lg fa-street-view"></span>
-				<span class="fa fa-lg fa-camera-retro"></span>
-				<span class="fa fa-lg fa-info-circle"></span>
-				<span class="fa fa-lg fa-times"></span>
+				<span class="fa fa-lg fa-comment faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-paper-plane faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-user-circle faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-street-view faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-camera-retro faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-info-circle faa-tada animated-hover"></span>
+				<span class="fa fa-lg fa-times faa-tada animated-hover"></span>
 			</div>
 		</div>`);
 	// https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
@@ -65,7 +65,7 @@ function loadWidget(config) {
 				window.ASTEROIDSPLAYERS.push(new Asteroids());
 			} else {
 				const script = document.createElement("script");
-				script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.js";
+				script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.min.js";
 				document.head.appendChild(script);
 			}
 		});
@@ -262,9 +262,9 @@ function initWidget(config, apiPath) {
 			apiPath
 		};
 	}
-	document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-			<span>看板娘</span>
-		</div>`);
+	// document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
+	// 		<span>看板娘</span>
+	// 	</div>`);
 	const toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
 		toggle.classList.remove("waifu-toggle-active");
