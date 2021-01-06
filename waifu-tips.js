@@ -19,7 +19,7 @@ function loadWidget(config) {
 	sessionStorage.removeItem("waifu-text");
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
 			<div id="waifu-tips"></div>
-			<canvas id="live2d" width="800" height="800"></canvas>
+			<canvas id="live2d" width="600" height="600"></canvas>
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-comment faa-tada animated-hover"></span>
 				<span class="fa fa-lg fa-paper-plane faa-tada animated-hover"></span>
@@ -85,7 +85,7 @@ function loadWidget(config) {
 			document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
 				document.getElementById("waifu").style.display = "none";
-				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
+				document.getElementById("waifu-toggle").style.display = "block";
 			}, 3000);
 		});
 		const devtools = () => {};
@@ -262,12 +262,9 @@ function initWidget(config, apiPath) {
 			apiPath
 		};
 	}
-	// document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-	// 		<span>看板娘</span>
-	// 	</div>`);
 	const toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
-		toggle.classList.remove("waifu-toggle-active");
+		toggle.style.display = "none";
 		if (toggle.getAttribute("first-time")) {
 			loadWidget(config);
 			toggle.removeAttribute("first-time");
@@ -282,7 +279,7 @@ function initWidget(config, apiPath) {
 	if (localStorage.getItem("waifu-display") && Date.now() - localStorage.getItem("waifu-display") <= 86400000) {
 		toggle.setAttribute("first-time", true);
 		setTimeout(() => {
-			toggle.classList.add("waifu-toggle-active");
+			toggle.style.display = "block";
 		}, 0);
 	} else {
 		loadWidget(config);
