@@ -85,7 +85,7 @@ function loadWidget(config) {
 			document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
 				document.getElementById("waifu").style.display = "none";
-				document.getElementById("waifu-toggle").style.display = "block";
+				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
 		const devtools = () => {};
@@ -264,7 +264,7 @@ function initWidget(config, apiPath) {
 	}
 	const toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
-		toggle.style.display = "none";
+		toggle.classList.remove("waifu-toggle-active");
 		if (toggle.getAttribute("first-time")) {
 			loadWidget(config);
 			toggle.removeAttribute("first-time");
@@ -279,7 +279,7 @@ function initWidget(config, apiPath) {
 	if (localStorage.getItem("waifu-display") && Date.now() - localStorage.getItem("waifu-display") <= 86400000) {
 		toggle.setAttribute("first-time", true);
 		setTimeout(() => {
-			toggle.style.display = "block";
+			toggle.classList.add("waifu-toggle-active");
 		}, 0);
 	} else {
 		loadWidget(config);

@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://cdn.jsdelivr.net/gh/Akilarlxh/live2d-widget@v0.15/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/Akilarlxh/live2d-widget@v0.16/";
 //const live2d_path = "/live2d-widget/";
 
 // 封装异步加载资源的方法
@@ -25,7 +25,7 @@ function loadExternalResource(url, type) {
 }
 
 // 加载 waifu.css live2d.min.js waifu-tips.js
-if (screen.width >= 768) {
+if (screen.width >=1024) {
 	Promise.all([
 		loadExternalResource(live2d_path + "waifu.min.css", "css"),
 		loadExternalResource(live2d_path + "live2d.min.js", "js"),
