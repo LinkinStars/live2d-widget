@@ -276,7 +276,7 @@ function initWidget(config, apiPath) {
       apiPath
     };
   }
-  document.getElementById('rightside-config-show').insertAdjacentHTML("beforeend", `<button id="waifu-toggle" type="button" title="看板娘"><i class="fas fa-heartbeat faa-pulse animated-hover"></i></button>`);
+  document.body.insertAdjacentHTML("beforeend", `<button id="waifu-toggle" type="button" title="看板娘"><i class="fas fa-heartbeat faa-pulse animated-hover"></i></button>`);
   const toggle = document.getElementById("waifu-toggle");
   toggle.addEventListener("click", () => {
     toggle.classList.remove("waifu-toggle-active");

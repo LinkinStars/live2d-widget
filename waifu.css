@@ -1,15 +1,33 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   #waifu {
     display: none;
   }
 }
 #waifu-toggle {
-  display: none;
+  display: block;
+  margin-bottom: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  right: -30px;
+  bottom: 118px;
+  transition: all 1.0s;
+  transform: translate(30px, 0);
+}
+#waifu-toggle:hover {
+  background-color: var(--btn-hover-color);
+}
+#waifu-toggle.waifu-toggle-active {
+  /* right: 0px; */
+  transition: all 1.0s;
+  transform: translate(-30px, 0);
 }
 
-#waifu-toggle.waifu-toggle-active {
-	display: block;
-}
 
 #waifu {
 	bottom: -1000px;
