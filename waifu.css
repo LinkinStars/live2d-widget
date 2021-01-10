@@ -1,14 +1,16 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #waifu {
     display: none;
   }
 }
+#waifu-toggle {
+  display: none;
+}
+
 #waifu-toggle.waifu-toggle-active {
-	display:block!important;
+	display: block;
 }
-#waifu-toggle{
-	display:none;
-}
+
 #waifu {
 	bottom: -1000px;
 	right: 100px;
