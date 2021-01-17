@@ -37,7 +37,7 @@ function loadWidget(config) {
 		</div>`);
   // https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
   setTimeout(() => {
-    document.getElementById("waifu").style.bottom = 0;
+    document.getElementById("waifu").style.bottom = 40;
   }, 0);
 
   function randomSelection(obj) {
@@ -276,7 +276,7 @@ function initWidget(config, apiPath) {
       apiPath
     };
   }
-  document.body.insertAdjacentHTML("beforeend", `<button id="waifu-toggle" type="button" title="看板娘"><i class="fas fa-heartbeat faa-pulse animated-hover"></i></button>`);
+  document.body.insertAdjacentHTML("beforeend", `<button id="waifu-toggle" type="button" title="看板娘"><i class="fa fa-heartbeat"></i></button>`);
   const toggle = document.getElementById("waifu-toggle");
   toggle.addEventListener("click", () => {
     toggle.classList.remove("waifu-toggle-active");
@@ -287,7 +287,7 @@ function initWidget(config, apiPath) {
       localStorage.removeItem("waifu-display");
       document.getElementById("waifu").style.display = "";
       setTimeout(() => {
-        document.getElementById("waifu").style.bottom = 0;
+        document.getElementById("waifu").style.bottom = 40;
       }, 0);
     }
   });
