@@ -8,8 +8,8 @@
   margin-bottom: 2px;
   width: 30px;
   height: 30px;
-  background-color: var(--btn-bg);
-  color: var(--btn-color);
+  background-color: #3d3e3e;
+  color: #fff;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
@@ -20,7 +20,7 @@
   transform: translate(30px, 0);
 }
 #waifu-toggle:hover {
-  background-color: var(--btn-hover-color);
+  background-color: #dd56a9;
 }
 #waifu-toggle.waifu-toggle-active {
   /* right: 0px; */
