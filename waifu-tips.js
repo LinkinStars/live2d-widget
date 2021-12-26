@@ -70,7 +70,7 @@ function loadWidget(config) {
         window.ASTEROIDSPLAYERS.push(new Asteroids());
       } else {
         const script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/stevenjoezhang/asteroids/asteroids.min.js";
+        script.src = "https://unpkg.zhimg.com/akilar-live2d-widget/asteroids.min.js";
         document.head.appendChild(script);
       }
     });
