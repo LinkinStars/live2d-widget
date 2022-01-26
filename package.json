@@ -1,6 +1,6 @@
 {
   "name": "akilar-live2d-widget",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "v2看板娘插件",
   "main": "autoload.js",
   "scripts": {
